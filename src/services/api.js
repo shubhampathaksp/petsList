@@ -25,9 +25,9 @@ export const fetchPetById = async (id) => {
 export const fetchBreedsByAnimal = async (animal) => {
   try {
     const response = await axios.get(`http://pets-v2.dev-apis.com/breeds?animal=${animal}`);
-    return response.data.breeds || [];  // Ensure it returns an array
+    return response.data.breeds || [];  
   } catch (error) {
     console.error('Error fetching breeds by animal:', error);
-    return [];  // Return an empty array on error
+    return [];  
   }
 };
